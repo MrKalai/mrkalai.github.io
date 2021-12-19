@@ -1,0 +1,55 @@
+.settings_panel{
+	position: fixed;
+    right: -166px;
+    top: 24%;
+    width: 166px;
+    background: #fff;
+    text-align: center;
+    z-index: 999;
+    opacity: 1;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.settings_panel.active{
+	right: 0px;
+}
+.toggle_bts {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 166px;
+    height: 40px;
+    line-height: 40px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.toggle_bts a {
+    float: left;
+    display: block;
+    width: 40px;
+    height: 40px;
+    color: #000;
+    background: #fff;
+    text-align: center;
+}
+.toggle_bts a i {
+    font-size: 20px;
+    line-height: 40px;
+    color: #222;
+    animation-name: settings;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.settings-content h5 {
+    margin: 25px 0 15px 0;
+    padding: 0 15px;
+    display: block;
+    font-size: 13px;
+    line-height: 16px;
+    color: #222;
+    background: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+}
