@@ -1882,7 +1882,7 @@ textarea.form-message{
 
     body {
         font-family: 'Montserrat', sans-serif;
-        padding-bottom: 218px;
+        padding-bottom: 0px;
     }
 
     footer .social {
