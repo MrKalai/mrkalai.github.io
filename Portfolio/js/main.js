@@ -83,6 +83,7 @@ $(document).ready( function() {
 
 // PORTFOLIO CONTENT  
     $('#grid-container').cubeportfolio({
+        filters: 'filters-container',
         layoutMode: 'grid',
         filters: '.portfolio-filter',
         gridAdjustment: 'responsive',
@@ -91,6 +92,61 @@ $(document).ready( function() {
         gapVertical: 30,
         gapHorizontal: 30,
         singlePageAnimation: 'fade',
+        mediaQueries: [{
+                width: 700,
+                cols: 3,
+            }, {
+                width: 480,
+                cols: 2,
+                options: {
+                    caption: '',
+                    gapHorizontal: 30,
+                    gapVertical: 20,
+                }
+            }, {
+                width: 320,
+                cols: 1,
+                options: {
+                    caption: '',
+                    gapHorizontal: 50,
+                }
+            }],            
+        singlePageCallback: function (url, element) {
+            var t = this;
+            $.ajax({
+                    url: url,
+                    type: 'GET',
+                    dataType: 'html',
+                    timeout: 30000
+                })
+                .done(function (result) {
+                    t.updateSinglePage(result);
+                })
+                .fail(function () {
+                    t.updateSinglePage('AJAX Error! Please refresh the page!');
+                });
+        },
+            plugins: {
+                loadMore: {
+                    element: '#port-loadMore',
+                    action: 'click',
+                    loadItems: 3,
+                }
+            }
+    }); 
+
+
+    $('#grid-container-showreel').cubeportfolio({
+        filters: '#filters-container',
+        layoutMode: 'grid',
+        lightboxGallery:false,
+        gridAdjustment: 'responsive',
+        animationType: 'skew',
+        defaultFilter: '*',
+        gapVertical: 30,
+        gapHorizontal: 30,
+        singlePageAnimation: 'fade',
+        filterDeeplinking:true,
         mediaQueries: [{
                 width: 700,
                 cols: 3,

@@ -1521,12 +1521,46 @@ textarea.form-message{
 }
 
 
+/* custom CSS */
+.services-nav{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:1rem;
+    cursor: pointer;
+    margin: auto;
+    padding-left: 0%;
+    
+    flex-wrap: wrap;
+}
 
+.cbp-filter-item{
+    padding: 6px 10px;
+    text-align: center;
+    color: white;
+    list-style: none;
+    font-size: x-large;
+
+}
+
+.cbp-filter-item-active{
+    background-color:#000 !important;
+    color: white !important;
+
+}
+
+.cbp-filter-item:hover{
+    background-color:#000;
+    color: white;
+
+}
 
 /*------------------------ Responsive ------------------------*/
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
+
+  
 
     header {
         padding: 22px;
@@ -1657,6 +1691,7 @@ textarea.form-message{
 
 @media (max-width: 767px) {
 
+ 
     .news-article{
         margin-bottom: 90px;
     }
@@ -1802,6 +1837,11 @@ textarea.form-message{
 
 
 @media (max-width: 480px) {
+
+    #grid-container-custom{
+        grid-template-columns: auto;
+    }
+
 
     header {
         padding: 16px;
