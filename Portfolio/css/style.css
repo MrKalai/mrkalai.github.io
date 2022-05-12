@@ -425,7 +425,7 @@ header{
     width: 100%;
     color: #000;
     text-align: left;
-    font-size: 16px;
+    font-size: 8px;
     border-radius: 8px;
 }
 
@@ -1530,7 +1530,7 @@ textarea.form-message{
     cursor: pointer;
     margin: auto;
     padding-left: 0%;
-    
+
     flex-wrap: wrap;
 }
 
@@ -1539,12 +1539,13 @@ textarea.form-message{
     text-align: center;
     color: white;
     list-style: none;
-    font-size: x-large;
+    font-size: 18px;
 
 }
 
 .cbp-filter-item-active{
-    background-color:#000 !important;
+    border-radius: 15px;
+    background-color:#593eff !important;
     color: white !important;
 
 }
@@ -1560,7 +1561,7 @@ textarea.form-message{
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
-  
+
 
     header {
         padding: 22px;
@@ -1691,7 +1692,7 @@ textarea.form-message{
 
 @media (max-width: 767px) {
 
- 
+
     .news-article{
         margin-bottom: 90px;
     }
